@@ -1,0 +1,51 @@
+doctype html
+html.no-js(ng-app="umconsole")
+  head
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge,chrome=1")
+    title UM Console
+    meta(name="description", content="")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1.0")
+    //link(href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic", rel="stylesheet", type="text/css")
+    link(rel="stylesheet", href="/font-awesome/css/font-awesome.min.css")
+    
+    script(src="jquery/dist/jquery.min.js")
+    script(src="angular/angular.min.js")
+    script(src="angular-ui-router/release/angular-ui-router.min.js")
+    
+   
+    link(rel="stylesheet", href="bootstrap/main.css")
+    script(src="bootstrap/dist/js/bootstrap.min.js")
+    
+    script(src="scripts/angularAppConfig.js")
+    script(src="scripts/umconsole.js")
+    script(src="scripts/elementCtrl.js")
+    
+    
+    script(src="scripts/MainScript.js")
+    link(rel="stylesheet", href="styles/style.css")
+    base(href="/")
+  body#app(data-custom-background="", data-off-canvas-nav="")
+    section#header.top-header
+      include header
+    aside#nav-container
+      include nav    
+
+
+    .view-container
+      section#content.animate-fade-up(ui-view="main",style="margin:50px;")
+     
+    
+    // include sharedElements
+    // div(ng-include='"partials/sharedElements.jade"')
+    
+
+    
+    script(src="scripts/vendor.js")
+    script(src="scripts/ui.js")    
+    script(src="scripts/tree.js")
+    link( rel="stylesheet" type="text/css" href="styles/tree.css")
+    link( rel="stylesheet" type="text/css" href="styles/custom.css")
+    script(src="scripts/shared.js")
+    
+    

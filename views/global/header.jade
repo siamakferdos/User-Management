@@ -1,0 +1,131 @@
+header.clearfix(ng-controller="headerCtrl")
+  a.toggle-min(href="#/", data-toggle-min-nav="")
+    i.fa.fa-bars
+  // Logo
+  .logo
+    a(href="#/")
+      span {{main.brand}}
+  // needs to be put after logo to make it working
+  .menu-button(toggle-off-canvas="")
+    span.icon-bar
+    span.icon-bar
+    span.icon-bar
+  .top-nav
+    ul.nav-left.list-unstyled
+      li.dropdown
+        a.dropdown-toggle(href="javascript:;", data-toggle="dropdown")
+          i.fa.fa-comment-o
+          span.badge.badge-success 2
+        .dropdown-menu.with-arrow.panel.panel-default
+          .panel-heading
+            | &#1588;&#1605;&#1575; 2 &#1662;&#1740;&#1575;&#1605; &#1583;&#1575;&#1585;&#1740;&#1583;
+          ul.list-group
+            li.list-group-item
+              a.media(href="javascript:;")
+                span.pull-right.media-icon
+                  span.round-icon.sm.bg-info
+                    i.fa.fa-comment-o
+                .media-body
+                  span.block &#1583;&#1585;&#1582;&#1608;&#1575;&#1587;&#1578; &#1588;&#1605;&#1575;&#1585;&#1607; 930020
+                  span.text-muted 3 &#1587;&#1575;&#1593;&#1578; &#1602;&#1576;&#1604;
+            li.list-group-item
+              a.media(href="javascript:;")
+                span.pull-right.media-icon
+                  span.round-icon.sm.bg-danger
+                    i.fa.fa-comment-o
+                .media-body
+                  span.block Lynda sent you a mail
+                  span.text-muted 9 hours ago
+          .panel-footer
+            a(href="javascript:;") &#1606;&#1605;&#1575;&#1740;&#1588; &#1705;&#1575;&#1585;&#1578;&#1575;&#1576;&#1604; &#1608;&#1585;&#1608;&#1583;&#1740;
+      li.dropdown
+        a.dropdown-toggle(href="javascript:;", data-toggle="dropdown")
+          i.fa.fa-envelope-o
+          span.badge.badge-info 3
+        .dropdown-menu.with-arrow.panel.panel-default
+          .panel-heading
+            | You have 3 mails.
+          ul.list-group
+            li.list-group-item
+              a.media(href="javascript:;")
+                span.pull-right.media-icon
+                  span.round-icon.sm.bg-warning
+                    i.fa.fa-envelope-o
+                .media-body
+                  span.block Lisa sent you a mail
+                  span.text-muted.block 2min ago
+            li.list-group-item
+              a.media(href="javascript:;")
+                span.pull-right.media-icon
+                  span.round-icon.sm.bg-info
+                    i.fa.fa-envelope-o
+                .media-body
+                  span.block Jane sent you a mail
+                  span.text-muted 3 hours ago
+            li.list-group-item
+              a.media(href="javascript:;")
+                span.pull-right.media-icon
+                  span.round-icon.sm.bg-success
+                    i.fa.fa-envelope-o
+                .media-body
+                  span.block Lynda sent you a mail
+                  span.text-muted 9 hours ago
+          .panel-footer
+            a(href="javascript:;") Show all mails.
+      li.dropdown
+        a.dropdown-toggle(href="javascript:;", data-toggle="dropdown")
+          i.fa.fa-bell-o.nav-icon
+          span.badge.badge-warning 3
+        .dropdown-menu.with-arrow.panel.panel-default
+          .panel-heading
+            | You have 3 notifications.
+          ul.list-group
+            li.list-group-item
+              a.media(href="javascript:;")
+                span.pull-right.media-icon
+                  span.round-icon.sm.bg-success
+                    i.fa.fa-bell-o
+                .media-body
+                  span.block New tasks needs to be done
+                  span.text-muted.block 2min ago
+            li.list-group-item
+              a.media(href="javascript:;")
+                span.pull-right.media-icon
+                  span.round-icon.sm.bg-info
+                    i.fa.fa-bell-o
+                .media-body
+                  span.block Change your password
+                  span.text-muted 3 hours ago
+            li.list-group-item
+              a.media(href="javascript:;")
+                span.pull-right.media-icon
+                  span.round-icon.sm.bg-danger
+                    i.fa.fa-bell-o
+                .media-body
+                  span.block New feature added
+                  span.text-muted 9 hours ago
+          .panel-footer
+            a(href="javascript:;") Show all notifications.
+    ul.nav-right.pull-left.list-unstyled
+      li.dropdown.text-normal.nav-profile
+        a.dropdown-toggle(href="javascript:;", data-toggle="dropdown")
+          img.img-circle.img30_30(src="images/g1.jpg", alt="")
+          span.hidden-xs
+            span(data-i18n="Lisa Doe")
+        ul.dropdown-menu.with-arrow.pull-right
+          li
+            a(href="#/pages/profile")
+              i.fa.fa-user
+              span(data-i18n="My Profile")
+          li
+            a(href="#/tasks")
+              i.fa.fa-check
+              span(data-i18n="My Tasks")
+          li
+            a(href="#/pages/lock-screen")
+              i.fa.fa-lock
+              span(data-i18n="Lock")
+          li
+            a(href="#/pages/signin")
+              i.fa.fa-sign-out
+              span(data-i18n="Log Out")

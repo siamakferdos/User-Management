@@ -1,0 +1,14 @@
+div#menuPartial(ng-controller="elementPartialCtrl")
+  div.col-lg-12.col-md-12.col-sm-12 
+    span.col-lg-2.col-md-5.col-sm-5 نام
+    input#EnglishName(name="name" type="text" ng-model="elementModel.Name"   class="col-lg-5 col-md-7 col-sm-5" empty-to-null)
+  div.col-lg-12.col-md-12.col-sm-12
+    span.col-lg-2.col-md-5.col-sm-5 وزن ترتیب
+    input#farsiName(name="order" type="text" ng-model="elementModel.Order"  class="col-lg-5 col-md-7 col-sm-5" empty-to-null)
+  div.col-lg-12.col-md-12.col-sm-12
+    span.col-lg-2.col-md-5.col-sm-5 آیکن
+    input#farsiName(name="icon" type="text" ng-model="elementModel.Icon"  class="col-lg-5 col-md-7 col-sm-5 disable" empty-to-null value="CONVERT(NVARCHAR(MAX), 0x00124, 1)")
+  //  div.col-lg-12.col-md-12.col-sm-12
+  //     span.col-lg-2.col-md-5.col-sm-5 آیکون
+  //     input#menuIcon(name="menuIcon" type="file" ng-model="elementModel.menuIcon" accept="image/*,MIME_type" class="col-lg-5 col-md-7 col-sm-5")
+  button(type="button" name="btnSaveElement"  ng-click="saveElement(#{eType})") ثبت      

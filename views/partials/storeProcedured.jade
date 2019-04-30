@@ -1,0 +1,5 @@
+div#spPartial(ng-controller="elementPartialCtrl")
+  div.col-lg-12.col-md-12.col-sm-12 
+    span.col-lg-2.col-md-5.col-sm-5 نام
+    input#EnglishName(name="name" type="text" ng-model="elementModel.Name"  class="col-lg-5 col-md-7 col-sm-5")  
+  button(type="button" compile-Data  name="btnSaveElement" ng-click="saveElement(#{eType})") ثبت

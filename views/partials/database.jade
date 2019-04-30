@@ -1,0 +1,24 @@
+div#menuPartial(ng-controller="elementPartialCtrl")
+  div.col-lg-12.col-md-12.col-sm-12 
+    span.col-lg-2.col-md-5.col-sm-5 نام سرور
+    input#ServerName(name="name" type="text" ng-model="elementModel.ServerName"  class="col-lg-5 col-md-7 col-sm-5")
+   div.col-lg-12.col-md-12.col-sm-12 
+    span.col-lg-2.col-md-5.col-sm-5 نام دیتابیس
+    input#Name(name="name" type="text" ng-model="elementModel.Name"  class="col-lg-5 col-md-7 col-sm-5")
+   div.col-lg-12.col-md-12.col-sm-12 
+    span.col-lg-2.col-md-5.col-sm-5 Authenticate Mode
+    input#AuthenticateMode(name="name" type="text" ng-model="elementModel.AuthenticateMode"   class="col-lg-5 col-md-7 col-sm-5")
+   div.col-lg-12.col-md-12.col-sm-12 
+    span.col-lg-2.col-md-5.col-sm-5 Login
+    input#Login(name="name" type="text" ng-model="elementModel.Login"   class="col-lg-5 col-md-7 col-sm-5")
+   div.col-lg-12.col-md-12.col-sm-12 
+    span.col-lg-2.col-md-5.col-sm-5 Password
+    input#Password(name="name" type="text" ng-model="elementModel.Password"   class="col-lg-5 col-md-7 col-sm-5")
+   div.col-lg-12.col-md-12.col-sm-12 
+    span.col-lg-2.col-md-5.col-sm-5 Status
+    input#Status(name="name" type="text" ng-model="elementModel.Status"  class="col-lg-5 col-md-7 col-sm-5")
+   div.col-lg-12.col-md-12.col-sm-12 
+    span.col-lg-2.col-md-5.col-sm-5 Is Remote
+    input#IsRemote(name="name" type="checkbox" ng-model="elementModel.IsRemote"   class="col-lg-5 col-md-7 col-sm-5")
+    
+  button(type="button" name="btnSaveElement" compile-Data ng-click="saveElement(#{eType})") ثبت

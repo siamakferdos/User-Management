@@ -1,0 +1,18 @@
+#nav-wrapper(ng-controller="NavCtrl")
+  ul#nav(data-collapse-nav="", data-slim-scroll="", data-highlight-active="")
+    li
+      a(ui-sref="definations")
+        i.glyphicon.glyphicon-th
+          span.icon-bg.bg-danger
+        span تعاریف اولیه
+      ul
+        li
+          a(ui-sref="users")
+            i.fa.fa-caret-left
+            span کاربر
+          a(ui-sref="userInProgram")
+            i.fa.fa-caret-left
+            span کاربران برنامه
+          a(ui-sref="elements")
+            i.fa.fa-caret-left
+            span اجزاء برنامه

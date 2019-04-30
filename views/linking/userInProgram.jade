@@ -1,0 +1,9 @@
+div(ng-controller="userInProgramCtrl")
+	.dropdown
+		button#dropdownPrograms.btn.btn-default.dropdown-toggle(data-live-search="true" type="button" data-toggle="dropdown" aria-haspopup="true" aira-expanded="true")
+			|     برنامه ها   
+			span.caret 
+		ul.dropdown-menu(aria-labelledby="dropdownPrograms"  ng-repeat="program in Programs | filter: filterquery")
+			li
+				button(ng-click="setProgramId({{program.ProgramId}})") {{program.FarsiName}}
+	{{ProgramId}}

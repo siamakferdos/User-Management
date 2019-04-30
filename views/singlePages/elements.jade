@@ -1,0 +1,22 @@
+
+// script(src="scripts/tree.js")
+// link( rel="stylesheet" type="text/css" href="styles/tree.css")
+div(ng-controller="elementCtrl")
+  div(class="col-lg-5 col-md-5 col-sm-5")
+    label نام برنامه
+    select#programId(ng-model="selectedProgram" style="margin-bottom:20px;") 
+      option(ng-repeat="program in programs" value="{{program.ProgramId}}") {{program.FarsiName}}
+    div
+        label.margin-left-10 درخت اجزاء
+        .btn-group
+            button.btn.btn-primary(type='button' calss="btn-xs margin-bottom-10" ng-click="addNode(8)") تعریف جزء جدید
+            button.btn.btn-primary.dropdown-toggle(type='button', data-toggle='dropdown')
+                span.caret        
+            ul.dropdown-menu(role='menu' ng-click="changeEditMode(false)")
+                li(ng-repeat="elementType in elementTypes" value="{{elementType.ElementTypeId}}"  name="btnAddNewElement") 
+                    a(ng-click="emptyModel()" ui-sref="elements.loadElementPartial({elementTypeId:'{{elementType.ElementTypeId}}'})") {{elementType.Name}}         
+        #tree
+        
+        
+        
+  div#ddd(ui-view="loadElementPartial" class="col-lg-7 col-md-5 col-sm-7")

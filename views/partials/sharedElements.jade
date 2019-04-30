@@ -1,0 +1,9 @@
+div(ng-controller="elementPartialCtrl")
+  .row
+    | نام انگلیسی
+    input#englishName(name="englishName" type="text" ng-model="elementModel.EnglishName")
+  .row
+    | نام فارسی 
+    input#farsiName(name="farsiName" type="text" ng-model="elementModel.FarsiName")
+  .row
+    button(type="button" name="btnSaveElement" ng-click="saveElement(#{eType})") ثبت

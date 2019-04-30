@@ -1,0 +1,58 @@
+div(ng-controller="userCtrl")
+	button.btn.btn-primary(data-toggle="modal",data-target="#addUser") کاربر جدید...
+	input(placeholder="جستجو...",ng-model="filterquery")
+	#addUser.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel')
+		.modal-dialog(role='document')
+			.modal-content
+				.modal-header
+					button.close(type='button', data-dismiss='modal', aria-label='Close')
+						span(aria-hidden='true') ×
+					h4#myModalLabel.modal-title تعریف کاربر جدید
+				.modal-body
+					form#newUserForm
+						.form-group
+							label(for="UserId") کد پرسنلی
+							input.form-control#UserId(type="text",name="UserId",placeholder="کد پرسنلی...")
+						.form-group
+							label(for="Password") رمز عبور
+							input.form-control#Password(type="password",name="Password",placeholder="رمز عبور...")
+						.form-group
+							label(for="FirstName") نام 
+							input.form-control#FirstName(type="text",name="FirstName",placeholder="نام...",value="{{firstName}}")
+						.form-group
+							label(for="LastName") نام خانوادگی 
+							input.form-control#LastName(type="text",name="LastName",placeholder="نام خانوادگی...",value="{{lastName}}")
+						.form-group
+							label(for="SystemUserName") System UserName  
+							input.form-control#SystemUserName(type="text",name="SystemUserName",placeholder="System Username...")
+						.form-group
+							label(for="ComputerName") Computer Name 
+							input.form-control#ComputerName(type="text",name="ComputerName",placeholder="Computer Name...")
+						.form-group
+							label(for="Sign") امضا
+							input.form-control#Sign(type="file" name="Sign")
+				.modal-footer
+					button.btn.btn-default(type='button', data-dismiss='modal') انصراف
+					button.btn.btn-primary(type='button',ng-click="registerUser()") {{isEditing ? 'ویرایش' : 'اضافه کردن'}}
+					
+	table#usersGrid.table.table-hover(style="margin-top:25px;")
+		thead
+			tr
+				th ردیف
+				th کد پرسنلی
+				th نام کاربر
+				th System UserName
+				th Computer Name
+				th 
+		tbody
+			tr(ng-repeat="user in users | filter: filterquery")
+				td {{$index}}
+				td {{user.UserId}}
+				td {{user.FullName}}
+				td {{user.SystemUserName}}
+				td {{user.ComputerName}}
+				td
+					a(href="#",data-toggle="modal",data-target="#addUser",ng-click="edit(user)")
+						i.fa.fa-pencil
+					a(href="#",ng-click="delete(user)")
+						i.fa.fa-trash
